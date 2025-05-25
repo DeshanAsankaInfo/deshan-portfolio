@@ -1,20 +1,26 @@
 'use client';
 import Image from 'next/image';
+import Link from 'next/link';
 
 const projects = [
     {
-        title: 'Presentation Design',
-        description: 'Engaging presentations that captivate and inform your audience.',
+        slug: 'presentation-design',
+        title: 'Presentation & Pitch Deck Design',
+        category: 'presentation',
+        description: 'Elevate your ideas with visually stunning, audience-focused presentations and pitch decks. From corporate reports to creative storytelling, we craft slides that engage and inspire.',
         image: '/projects/presentation.svg',
-        tags: ['Presentation', 'PowerPoint', 'ppt'],
+        tags: ['Presentation', 'Pitch Deck', 'PowerPoint', 'ppt', 'Business', 'Investor', 'Storytelling', ],
     },
     {
-        title: 'Logo Design',
+        slug: 'logo-design',
+        title: 'Logo and Character design.',
+        category: 'logo',
         description: 'Mascot logo and character design.',
         image: '/projects/logo.svg',
         tags: ['Logo', 'Mascot', 'Cartoon'],
     },
 ];
+
 
 export default function PortfolioPreview() {
     return (
@@ -44,9 +50,9 @@ export default function PortfolioPreview() {
                             height={250}
                             className="rounded-xl mb-4"
                         />
-                        <h3 className="font-semibold text-gray-800 text-lg">{project.title}</h3>
-                        <p className="text-[15px] text-gray-800 mb-3">{project.description}</p>
-                        <div className="flex flex-wrap gap-2 mb-4">
+                        <h3 className="font-semibold text-gray-800 py-1 text-lg">{project.title}</h3>
+                        
+                        <div className="flex flex-wrap gap-2 py-2 mb-4">
                             {project.tags.map((tag, i) => (
                                 <span
                                     key={i}
@@ -56,11 +62,13 @@ export default function PortfolioPreview() {
                                 </span>
                             ))}
                         </div>
-                        <button className="bg-blue-600 text-white px-4 py-2 text-sm rounded-full hover:bg-blue-700 transition">
-                            View Portfolio
-                        </button>
-                    </div>
+                        <Link href={`/portfolio/${project.category}`}>
+                            <button className="bg-blue-600 text-white px-4 py-2 text-sm rounded-full hover:bg-blue-700 transition">
+                                View Portfolio
+                            </button>
+                        </Link>
 
+                    </div>
                 ))}
             </div>
         </section>

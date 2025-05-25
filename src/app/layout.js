@@ -2,8 +2,8 @@ import './globals.css'
 import Navbar from '@/components/Navbar'
 
 export const metadata = {
-  title: 'Deshan Portfolio',
-  description: 'Creative Portfolio by Deshan Asanka',
+  title: 'Deshan Asanka | Portfolio',
+  description: 'My portfolio showcasing design and development projects.',
 }
 
 export default function RootLayout({ children }) {

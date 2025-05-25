@@ -13,9 +13,10 @@ export default function ScrollWrapper({ children }) {
     let currentScroll = container.scrollTop;
 
     const handleWheel = (e) => {
+      e.preventDefault(); // Prevent default scroll
       isWheel = true;
-      e.preventDefault();
-      scrollTarget += e.deltaY * 0.5;
+      scrollTarget += e.deltaY * 0.5; // Adjust this value for scroll speed
+      scrollTarget = Math.max(0, Math.min(container.scrollHeight, scrollTarget)); // Prevent overflow
     };
 
     const handleUserScroll = () => {
@@ -26,12 +27,8 @@ export default function ScrollWrapper({ children }) {
     };
 
     const smoothScroll = () => {
-      if (Math.abs(scrollTarget - currentScroll) > 0.5) {
-        currentScroll += (scrollTarget - currentScroll) * 0.035;
-        container.scrollTop = currentScroll;
-      } else {
-        isWheel = false; // release control to user again
-      }
+      currentScroll += (scrollTarget - currentScroll) * 0.08; // Adjust for scroll smoothness (higher = slower)
+      container.scrollTop = currentScroll;
       requestAnimationFrame(smoothScroll);
     };
 
@@ -50,7 +47,7 @@ export default function ScrollWrapper({ children }) {
       ref={containerRef}
       className="h-screen overflow-y-scroll"
       style={{
-        scrollBehavior: 'auto', // disable native smooth
+        scrollBehavior: 'auto', // Disable native smooth
       }}
     >
       {children}

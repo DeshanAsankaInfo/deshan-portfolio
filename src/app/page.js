@@ -53,10 +53,10 @@ export default function HomePage() {
 
           {/* Social Icons */}
           <div className="flex gap-6 mt-6">
-            <Link href="https://linkedin.com" target="_blank">
+            <Link href="https://www.linkedin.com/in/deshanasanka/" target="_blank">
               <Image src="/linkedin.svg" alt="LinkedIn" width={32} height={32} />
             </Link>
-            <Link href="https://github.com" target="_blank">
+            <Link href="https://github.com/DeshanAsankaInfo" target="_blank">
               <Image src="/github.svg" alt="GitHub" width={32} height={32} />
             </Link>
           </div>

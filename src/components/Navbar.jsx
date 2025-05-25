@@ -34,11 +34,12 @@ export default function Navbar() {
 
       {/* Right Buttons */}
       <div className="flex gap-3">
-        <Link href="/Deshan-CV.pdf" target="_blank">
-          <button className="border border-blue-600 text-blue-600 px-5 py-1.5 rounded-full text-sm font-medium hover:bg-blue-50 transition">
+        <Link href="/Deshan-CV.pdf" target="_blank" rel="noopener noreferrer">
+          <button className="border-2 border-blue-600 text-blue-600 px-6 py-1 rounded-full text-sm font-medium hover:bg-blue-600 hover:text-white transition">
             CV
           </button>
         </Link>
+
         <Link href="/contact">
           <button className="bg-blue-600 text-white px-5 py-1.5 rounded-full text-sm font-medium hover:bg-blue-700 transition">
             Contact Me
