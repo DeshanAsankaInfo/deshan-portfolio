@@ -1,41 +1,49 @@
-// src/data/projects.js
-'use client';
-// src/data/projects.js
 const projects = [
   {
-    id: 1,
-    category: 'presentation',
-    title: 'White Blue Simple Business Pitch Deck',
-    image: '/projects/presentation1.jpg', // Thumbnail
-    slides: [
-      '/projects/presentation1_slide1.jpg',
-      '/projects/presentation1_slide2.jpg',
-      '/projects/presentation1_slide3.jpg',
-    ],
-    description: 'A clean and modern pitch deck design for corporate presentations.',
+    slug: 'uiux',
+    title: 'UI/UX Design',
+    category: 'uiux',
+    description: 'UI/UX Design.',
+    image: '/projects/UIUXDesign.svg',
+    tags: ['UI', 'UX'],
+    link: '/portfolio/uiux'
   },
   {
-    id: 2,
-    category: 'presentation',
-    title: 'Creative Product Mockups',
-    image: '/projects/presentation.jpg',
-    slides: [
-      '/projects/presentation.jpg',
-      '/projects/presentation.jpg',
-    ],
-    description: 'Mockups for showcasing products in an engaging way.',
+    slug: 'webdev',
+    title: 'Web Development',
+    category: 'webdev',
+    description: 'Web Development',
+    image: '/projects/WebDevelopment.svg',
+    tags: ['Website', 'Wordpress', 'Flutter'],
+    link: '/portfolio/webdev'
   },
   {
-    id: 3,
+    slug: 'software',
+    title: 'Software & Web Applications',
+    category: 'software',
+    description: 'Software & Web Applications',
+    image: '/projects/Software&WebApplications.svg',
+    tags: ['Software', 'Web Application'],
+    link: '/portfolio/software'
+  },
+  {
+    slug: 'presentation',
+    title: 'Presentation & Pitch Deck Design',
+    category: 'presentation',
+    description: 'Presentation Design',
+    image: '/projects/presentation.svg',
+    tags: ['Presentation', 'Pitch Deck'],
+    link: '/portfolio/presentation'
+  },
+  {
+    slug: 'logo',
+    title: 'Logo and Character Design',
     category: 'logo',
-    title: 'Mascot Logo Design - Turf Titan',
-    image: '/projects/logo.jpg',
-    slides: [
-      '/projects/logo.jpg',
-      '/projects/logo.jpg',
-    ],
-    description: 'A vibrant mascot logo for a sports brand.',
-  },
+    description: 'Mascot logo design.',
+    image: '/projects/logo.svg',
+    tags: ['Logo', 'Mascot'],
+    link: '/portfolio/logo'
+  }
 ];
 
 export default projects;

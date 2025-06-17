@@ -3,15 +3,16 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import ScrollWrapper from '@/components/ScrollWrapper';
-import Gallery from './components/Gallery';
 import Footer from '@/components/Footer';
 import CollaborationCTA from '@/components/CollaborationCTA';
-import allProjects from '@/data/projects';  // Make sure you import your full project list!
+import softwareProjects from '@/data/softwareProjects';
+import allProjects from '@/data/projects';
 
-export default function LogoDesignPortfolioPage() {
+export default function SoftwarePortfolioPage() {
   return (
     <ScrollWrapper>
-      <div className="flex flex-col min-h-screen bg-gradient-to-b from-[#FFF0F6] to-[#F9FBFC] relative">
+      <div className="flex flex-col min-h-screen bg-gradient-to-b from-[#E3F2FD] to-[#F1F8FF] relative">
+
 
         {/* Back Button */}
         <div className="fixed top-25 left-6 z-50">
@@ -23,41 +24,45 @@ export default function LogoDesignPortfolioPage() {
         </div>
 
         <main className="flex-grow pt-32 px-6 pb-20">
-
           <div className="text-center mb-10">
-            <p className="text-sm text-gray-600" style={{ fontFamily: 'Otterco Display, sans-serif' }}>
-              Portfolio
-            </p>
-            <h1 className="text-[40px] md:text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#E95420] to-[#FFB400]" style={{ fontFamily: 'Otterco Display, sans-serif' }}>
-              Logo and Character Design Portfolio
+            <p className="text-sm text-gray-600" style={{ fontFamily: 'Otterco Display, sans-serif' }}>Portfolio</p>
+            <h1 className="text-[40px] md:text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#0288D1] to-[#00ACC1]" style={{ fontFamily: 'Otterco Display, sans-serif' }}>
+              Software & Web Applications Portfolio
             </h1>
             <p className="text-gray-700 mt-4 max-w-2xl mx-auto text-base">
-              Dive into a creative world of mascot logos and character designs that bring brands to life with personality and flair.
+              Explore custom-built software platforms, SaaS products, business apps, and enterprise solutions.
             </p>
           </div>
 
           <div className="flex flex-wrap justify-center gap-10">
-            <Gallery />
+            {softwareProjects.map((project) => (
+              <div key={project.id} className="bg-white rounded-xl shadow-md p-4 max-w-sm w-full text-left">
+                <div className="relative w-full aspect-[16/9] mb-4 rounded-lg overflow-hidden">
+                  <Image src={project.coverImage} alt={project.title} fill className="object-cover" />
+                </div>
+                <h2 className="font-semibold text-gray-800 py-1 text-lg">{project.title}</h2>
+                <p className="text-sm text-gray-600 mb-3">{project.shortDescription}</p>
+                <Link href={`/portfolio/software/${project.slug}`}>
+                  <button className="bg-blue-600 text-white px-4 py-2 text-sm rounded-full hover:bg-blue-700 transition">
+                    View Case Study
+                  </button>
+                </Link>
+              </div>
+            ))}
           </div>
 
           {/* Other Portfolio Suggestions */}
           <div className="mt-28">
             <h2 className="text-center text-3xl font-bold text-blue-700 mb-12">Explore More Portfolios</h2>
-
             <div className="flex flex-wrap justify-center gap-8">
               {allProjects
-                .filter(p => p.slug !== 'logo')  // Exclude this page itself
+                .filter(p => p.slug !== 'software')
                 .map((project, idx) => (
-                  <div
-                    key={idx}
-                    className="bg-white rounded-xl shadow-md p-3 max-w-[220px] w-full text-center hover:shadow-lg transition"
-                  >
+                  <div key={idx} className="bg-white rounded-xl shadow-md p-3 max-w-[220px] w-full text-center hover:shadow-lg transition">
                     <div className="relative w-full aspect-[5/4] mb-3 rounded-lg overflow-hidden">
                       <Image src={project.image} alt={project.title} fill className="object-contain" />
                     </div>
-
                     <h3 className="font-semibold text-gray-800 text-base mb-2">{project.title}</h3>
-
                     <Link href={`/portfolio/${project.category}`}>
                       <button className="bg-blue-600 text-white px-3 py-1.5 text-sm rounded-full hover:bg-blue-700 transition">
                         View
@@ -67,17 +72,15 @@ export default function LogoDesignPortfolioPage() {
                 ))}
             </div>
           </div>
-
         </main>
 
-        <section className="w-full bg-[#FFFDFD]">
+        <section className="w-full bg-[#FAFAFB]">
           <CollaborationCTA />
         </section>
 
-        <footer className="w-full bg-gradient-to-b from-[#FFEBEE] to-[#FFFDFD]">
+        <footer className="w-full bg-gradient-to-b from-[#E6F0FA] to-[#FAFAFB]">
           <Footer />
         </footer>
-
       </div>
     </ScrollWrapper>
   );
