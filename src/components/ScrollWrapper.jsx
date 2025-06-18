@@ -8,33 +8,46 @@ export default function ScrollWrapper({ children }) {
     const container = containerRef.current;
     if (!container) return;
 
-    let isWheel = false;
     let scrollTarget = container.scrollTop;
     let currentScroll = container.scrollTop;
+    let isAnimating = false;
+
+    const clamp = (value, min, max) => Math.max(min, Math.min(max, value));
 
     const handleWheel = (e) => {
-      e.preventDefault(); // Prevent default scroll
-      isWheel = true;
-      scrollTarget += e.deltaY * 0.5; // Adjust this value for scroll speed
-      scrollTarget = Math.max(0, Math.min(container.scrollHeight, scrollTarget)); // Prevent overflow
+      e.preventDefault();
+      scrollTarget += e.deltaY * 0.8;
+      scrollTarget = clamp(scrollTarget, 0, container.scrollHeight - container.clientHeight);
+      if (!isAnimating) {
+        smoothScroll();
+      }
+    };
+
+    const smoothScroll = () => {
+      isAnimating = true;
+      const animate = () => {
+        const distance = scrollTarget - currentScroll;
+        if (Math.abs(distance) < 0.5) {
+          container.scrollTop = scrollTarget;
+          isAnimating = false;
+          return;
+        }
+        currentScroll += distance * 0.1;
+        container.scrollTop = currentScroll;
+        requestAnimationFrame(animate);
+      };
+      requestAnimationFrame(animate);
     };
 
     const handleUserScroll = () => {
-      if (!isWheel) {
+      if (!isAnimating) {
         scrollTarget = container.scrollTop;
         currentScroll = container.scrollTop;
       }
     };
 
-    const smoothScroll = () => {
-      currentScroll += (scrollTarget - currentScroll) * 0.08; // Adjust for scroll smoothness (higher = slower)
-      container.scrollTop = currentScroll;
-      requestAnimationFrame(smoothScroll);
-    };
-
     container.addEventListener('wheel', handleWheel, { passive: false });
     container.addEventListener('scroll', handleUserScroll);
-    requestAnimationFrame(smoothScroll);
 
     return () => {
       container.removeEventListener('wheel', handleWheel);
@@ -45,9 +58,11 @@ export default function ScrollWrapper({ children }) {
   return (
     <div
       ref={containerRef}
-      className="h-screen overflow-y-scroll"
+      tabIndex={0}
+      className="h-screen overflow-y-scroll scrollbar-hide"
       style={{
-        scrollBehavior: 'auto', // Disable native smooth
+        scrollBehavior: 'auto',
+        WebkitOverflowScrolling: 'auto',
       }}
     >
       {children}

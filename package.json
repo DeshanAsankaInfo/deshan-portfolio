@@ -9,14 +9,18 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@lottiefiles/react-lottie-player": "^3.6.0",
+    "lottie-react": "^2.4.1",
     "lucide-react": "^0.517.0",
     "next": "15.2.4",
+    "nextjs-google-analytics": "^2.3.7",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-fast-marquee": "^1.6.5"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
+    "sharp-cli": "^5.1.0",
     "tailwindcss": "^4"
   }
 }

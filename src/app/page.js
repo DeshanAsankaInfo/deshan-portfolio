@@ -18,10 +18,11 @@ export default function HomePage() {
   return (
     <ScrollWrapper>
       <main className="flex flex-col items-center text-center">
+
         {/* ✅ Hero Section */}
         <section
-          className="min-h-[500px] w-full pt-36 pb-20 px-4 bg-cover bg-no-repeat bg-center flex flex-col items-center rounded-b-[80px]"
-          style={{ backgroundImage: "url('/hero_background.svg')" }}
+          aria-label="Hero section with background"
+          className="min-h-[500px] w-full pt-36 pb-20 px-4 bg-[url('/hero_background.svg')] bg-cover bg-no-repeat bg-center flex flex-col items-center rounded-b-[80px] sm:rounded-b-[100px] md:rounded-b-[120px] overflow-hidden animate-fadeIn"
         >
           {/* Profile Image */}
           <div className="relative w-28 h-28 md:w-32 md:h-32 mb-6">
@@ -83,7 +84,7 @@ export default function HomePage() {
 
         {/* ✅ Contact Me Highlight Section */}
         <section className="w-full py-0 bg-[#FAFAFB]">
-        <ContactMeHighlight />
+          <ContactMeHighlight />
         </section>
 
         {/* ✅ Collaboration CTA Section */}
@@ -91,12 +92,9 @@ export default function HomePage() {
           <CollaborationCTA />
         </section>
 
-
         {/* ✅ Footer */}
         <Footer />
       </main>
-
     </ScrollWrapper>
   );
 }
-

@@ -21,7 +21,7 @@ export default function WebDevCollectionPage({ params }) {
       <div className="flex flex-col min-h-screen bg-gradient-to-b from-[#F7FAFD] to-[#F9FCFF]">
 
         {/* Close Button */}
-<div className="fixed top-24 left-6 z-50">
+<div className="fixed top-20 left-6 z-50">
   <Link href={`/portfolio/webdev/${slug}#gallery`} scroll={true}>
     <div className="group relative w-10 h-10 md:w-12 md:h-12 bg-white/70 backdrop-blur-md rounded-full border border-gray-300 shadow-md transition-all duration-300 hover:bg-blue-600 hover:shadow-xl flex items-center justify-center">
       <span className="text-blue-700 text-2xl font-bold leading-none group-hover:text-white transition-colors duration-300">

@@ -3,7 +3,7 @@ const uiuxProjects = [
     id: 1,
     slug: "travel-app",
     title: "Travel App Design & Branding",
-    coverImage: "/projects/uiux/uiux1/uiux1.jpg",
+    coverImage: "/projects/uiux/uiux1/uiux1.webp",
     shortDescription: "Web App Design & Branding for a Travel Startup.",
     date: "May 2023",
     client: "Fliptrek (GetA2B)",
@@ -23,30 +23,30 @@ const uiuxProjects = [
       {
         stepTitle: "Defining the Brand",
         description: "Strategy, brand attributes, target audience, personas.",
-        image: "/projects/uiux/uiux1/uiux2.jpg"
+        image: "/projects/uiux/uiux1/uiux2.webp"
       },
       {
         stepTitle: "Exploring the Visual Identity",
         description:
           "Created 3 landing page mockups showcasing design directions.",
-        image: "/projects/uiux/uiux1/uiux1.jpg"
+        image: "/projects/uiux/uiux1/uiux1.webp"
       },
       {
         stepTitle: "Logo Exploration & Refinement",
         description:
           "Developed multiple logo concepts. Final logo spacing and color refinement done based on client feedback.",
-        image: "/projects/uiux/uiux1/uiux2.jpg"
+        image: "/projects/uiux/uiux1/uiux2.webp"
       },
       {
         stepTitle: "User Flow & Wireframes",
         description:
           "Designed app structure via flowchart and created screen-by-screen wireframes.",
-        image: "/projects/uiux/uiux1/uiux1.jpg"
+        image: "/projects/uiux/uiux1/uiux1.webp"
       },
       {
         stepTitle: "UI Design",
         description: "Final desktop, tablet, and mobile screens.",
-        image: "/projects/uiux/uiux1/uiux2.jpg"
+        image: "/projects/uiux/uiux1/uiux2.webp"
       }
     ],
 
@@ -56,24 +56,24 @@ const uiuxProjects = [
         slug: "home-screen",
         sectionTitle: "Home Screen",
         images: [
-          "/projects/uiux/uiux1/uiux1.jpg",
-          "/projects/uiux/uiux1/uiux2.jpg"
+          "/projects/uiux/uiux1/uiux1.webp",
+          "/projects/uiux/uiux1/uiux2.webp"
         ]
       },
       {
         slug: "booking-flow",
         sectionTitle: "Booking Flow",
         images: [
-          "/projects/uiux/uiux1/uiux1.jpg",
-          "/projects/uiux/uiux1/uiux2.jpg"
+          "/projects/uiux/uiux1/uiux1.webp",
+          "/projects/uiux/uiux1/uiux2.webp"
         ]
       },
       {
         slug: "profile-screen",
         sectionTitle: "Profile Screen",
         images: [
-          "/projects/uiux/uiux1/uiux1.jpg",
-          "/projects/uiux/uiux1/uiux2.jpg"
+          "/projects/uiux/uiux1/uiux1.webp",
+          "/projects/uiux/uiux1/uiux2.webp"
         ]
       }
     ]

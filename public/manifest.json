@@ -1,0 +1,15 @@
+{
+  "name": "Deshan Asanka Portfolio",
+  "short_name": "Deshan",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FAFAFB",
+  "theme_color": "#088DF7",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "48x48",
+      "type": "image/x-icon"
+    }
+  ]
+}

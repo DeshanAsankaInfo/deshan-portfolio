@@ -4,7 +4,7 @@ const webdevProjects = [
     id: 1,
     slug: "cravecrip-ordering-site",
     title: "Cravecrip Food Ordering Website",
-    coverImage: "/projects/webdev/webdev1/1.jpg",
+    coverImage: "/projects/webdev/webdev1/1.webp",
     shortDescription:
       "A responsive and user-friendly PHP-based food ordering platform featuring real-time tracking, admin panel, and smooth checkout process.",
     date: "May 2024",
@@ -103,25 +103,25 @@ const webdevProjects = [
         stepTitle: "Requirement Gathering",
         description:
           "Planned a lightweight and scalable system tailored for fast food ordering needs.",
-        image: "/projects/webdev/cravecrip/step1.jpg"
+        image: "/projects/webdev/cravecrip/step1.webp"
       },
       {
         stepTitle: "Frontend Development",
         description:
           "Built an intuitive, responsive UI using HTML, CSS, and JavaScript, ensuring optimal user experience on all devices.",
-        image: "/projects/webdev/cravecrip/step2.jpg"
+        image: "/projects/webdev/cravecrip/step2.webp"
       },
       {
         stepTitle: "Backend Development",
         description:
           "Coded backend with PHP, managing dynamic content, cart logic, and admin actions like menu updates and order handling.",
-        image: "/projects/webdev/cravecrip/step3.jpg"
+        image: "/projects/webdev/cravecrip/step3.webp"
       },
       {
         stepTitle: "Testing & Launch",
         description:
           "Tested all flows, ensured smooth checkout, fixed bugs, and demonstrated the site in local environment using XAMPP.",
-        image: "/projects/webdev/cravecrip/step4.jpg"
+        image: "/projects/webdev/cravecrip/step4.webp"
       }
     ],*/
 
@@ -131,18 +131,18 @@ const webdevProjects = [
         slug: "homepage",
         sectionTitle: "Homepage",
         images: [
-          "/projects/webdev/webdev1/1.jpg",
-          "/projects/webdev/webdev1/2.jpg",
-          "/projects/webdev/webdev1/3.jpg"
+          "/projects/webdev/webdev1/1.webp",
+          "/projects/webdev/webdev1/2.webp",
+          "/projects/webdev/webdev1/3.webp"
         ]
       },
       {
         slug: "ordering_process",
         sectionTitle: "Ordering Process",
         images: [
-          "/projects/webdev/webdev1/2.jpg",
-          "/projects/webdev/webdev1/4.jpg",
-          "/projects/webdev/webdev1/5.jpg"
+          "/projects/webdev/webdev1/2.webp",
+          "/projects/webdev/webdev1/4.webp",
+          "/projects/webdev/webdev1/5.webp"
           
         ]
       },
@@ -150,7 +150,7 @@ const webdevProjects = [
         slug: "admin-dashboard",
         sectionTitle: "Admin Dashboard",
         images: [
-          "/projects/webdev/webdev1/6.jpg",
+          "/projects/webdev/webdev1/6.webp",
         ]
       }
     ],

@@ -3,7 +3,7 @@ const softwareProjects = [
     id: 1,
     slug: "drpet-clinic-system",
     title: "Dr.Pet Veterinary Clinic Management System",
-    coverImage: "/projects/software/software1/3.jpg",
+    coverImage: "/projects/software/software1/3.webp",
     shortDescription:
       "Desktop application for managing veterinary clinics with role-based access, pet records, appointments, and prescriptions.",
     date: "June 2025",
@@ -54,25 +54,25 @@ const softwareProjects = [
         stepTitle: "Requirement Gathering",
         description:
           "Identified core needs of veterinary clinic operations including pet record tracking, user management, and appointment scheduling.",
-        image: "/projects/software/software1/2.jpg"
+        image: "/projects/software/software1/2.webp"
       },
       {
         stepTitle: "Role-Based Access Design",
         description:
           "Implemented secure login system for Admins, Doctors, Receptionists, and Pharmacists.",
-        image: "/projects/software/software1/3.jpg"
+        image: "/projects/software/software1/3.webp"
       },
       {
         stepTitle: "GUI and Functionality",
         description:
           "Developed intuitive user interfaces using Java Swing and structured backend logic with MVC architecture.",
-        image: "/projects/software/software1/4.jpg"
+        image: "/projects/software/software1/4.webp"
       },
       {
         stepTitle: "Data Management (MySQL Optional)",
         description:
           "Integrated MySQL for persistent data storage including pet records, appointments, and prescriptions.",
-        image: "/projects/software/software1/5.jpg"
+        image: "/projects/software/software1/5.webp"
       }
     ],
     */
@@ -82,21 +82,21 @@ const softwareProjects = [
         slug: "login-home-dashboard",
         sectionTitle: "Login, Home & Dashboard",
         images: [
-          "/projects/software/software1/2.jpg",
+          "/projects/software/software1/2.webp",
         ]
       },
       {
         slug: "role-access",
         sectionTitle: "Role-Based Panels",
         images: [
-          "/projects/software/software1/1.jpg",
+          "/projects/software/software1/1.webp",
         ]
       },
       {
         slug: "pet-appointment-prescriptions",
         sectionTitle: "Pet Records, Appointments & Prescriptions",
         images: [
-          "/projects/software/software1/3.jpg",
+          "/projects/software/software1/3.webp",
 
         ]
       }

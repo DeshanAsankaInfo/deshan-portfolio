@@ -1,1 +1,3 @@
-RUN - npm run dev
+RUN = npm run dev
+
+jpg -> webp = for %f in (*.jpg) do npx sharp-cli --input "%f" --output "%~nf.webp"
