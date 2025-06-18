@@ -8,7 +8,8 @@ import ScrollWrapper from '@/components/ScrollWrapper';
 import dynamic from 'next/dynamic';
 import CollaborationCTA from '@/components/CollaborationCTA';
 import Footer from '@/components/Footer';
-
+import AboutOverview from '@/components/AboutOverview';
+import ContactMeHighlight from '@/components/ContactMeHighlight';
 
 // Dynamically import WorkCompanies to avoid hydration mismatch
 const WorkCompanies = dynamic(() => import('@/components/WorkCompanies'), { ssr: false });
@@ -62,8 +63,11 @@ export default function HomePage() {
           </div>
         </section>
 
+        {/* ✅ About Overview Section */}
+        <AboutOverview />
+
         {/* ✅ Core Skills Section */}
-        <section className="w-full py-20 bg-[#FAFAFB]">
+        <section className="w-full py-15 bg-[#FAFAFB]">
           <CoreSkills />
         </section>
 
@@ -73,8 +77,13 @@ export default function HomePage() {
         </section>
 
         {/* ✅ Work Companies Section (Dynamic Import to Prevent Hydration Error) */}
-        <section className="w-full py-10 bg-[#FAFAFB]">
+        <section className="w-full py-5 bg-[#FAFAFB]">
           <WorkCompanies />
+        </section>
+
+        {/* ✅ Contact Me Highlight Section */}
+        <section className="w-full py-0 bg-[#FAFAFB]">
+        <ContactMeHighlight />
         </section>
 
         {/* ✅ Collaboration CTA Section */}

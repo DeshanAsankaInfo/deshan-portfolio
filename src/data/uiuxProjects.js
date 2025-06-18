@@ -1,5 +1,5 @@
 const uiuxProjects = [
-  {
+/*  {
     id: 1,
     slug: "travel-app",
     title: "Travel App Design & Branding",
@@ -77,7 +77,7 @@ const uiuxProjects = [
         ]
       }
     ]
-  }
+  }*/
 ];
 
 export default uiuxProjects;

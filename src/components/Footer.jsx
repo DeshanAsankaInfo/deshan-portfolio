@@ -1,39 +1,36 @@
 'use client';
 
 import Link from 'next/link';
-import { usePathname, useRouter } from 'next/navigation';
+import { usePathname } from 'next/navigation';
 import Image from 'next/image';
 
 export default function Footer() {
   const pathname = usePathname();
-  const router = useRouter();
 
-  // Handle refresh if already on "/"
+  // Force full browser reload if already on homepage
   const handleHomeClick = (e) => {
     if (pathname === '/') {
       e.preventDefault();
-      router.refresh();
+      window.location.href = '/'; // Full reload
     }
   };
 
   return (
-    <footer className="w-full bg-gradient-to-b from-[#BCDFEE] to-[#F4F8FB] pt-6 pb-3">
-
+    <footer className="w-full bg-gradient-to-b from-[#BCDFEE] to-[#F4F8FB] pt-6 pb-4">
       {/* Top CV Button */}
-      <div className="flex justify-center mb-6">
+      <div className="flex justify-center mb-6 px-4">
         <Link href="/Deshan-CV.pdf" target="_blank" rel="noopener noreferrer">
           <button className="border-2 border-blue-600 text-blue-600 px-6 py-1 rounded-full text-sm font-medium hover:bg-blue-600 hover:text-white transition">
             CV
           </button>
         </Link>
-
       </div>
 
       {/* Footer Grid */}
-      <div className="grid grid-cols-3 items-center max-w-6xl mx-auto w-full px-6 pb-6">
-
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-center max-w-6xl mx-auto w-full px-6 pb-6 text-center md:text-left">
+        
         {/* Left: Navigation Links */}
-        <div className="flex justify-start gap-6 text-sm font-medium text-black">
+        <div className="flex justify-center md:justify-start gap-6 text-sm font-medium text-black">
           <NavItem href="/" label="Home" pathname={pathname} onClick={handleHomeClick} />
           <NavItem href="/#portfolio" label="Portfolio" pathname={pathname} />
           <NavItem href="/about" label="About Me" pathname={pathname} />
@@ -53,7 +50,7 @@ export default function Footer() {
         </div>
 
         {/* Right: Social Icons */}
-        <div className="flex justify-end gap-4">
+        <div className="flex justify-center md:justify-end gap-4">
           <Link href="https://www.linkedin.com/in/deshanasanka/" target="_blank" rel="noopener noreferrer">
             <Image src="/linkedin.svg" alt="LinkedIn" width={32} height={32} />
           </Link>
@@ -64,7 +61,7 @@ export default function Footer() {
       </div>
 
       {/* Bottom Copyright */}
-      <div className="text-center text-sm text-gray-600 pt-3 pb-2">
+      <div className="text-center text-sm text-gray-600 pt-2">
         © 2025 Deshan Asanka. All rights reserved.
       </div>
     </footer>
@@ -73,10 +70,11 @@ export default function Footer() {
 
 function NavItem({ href, label, pathname, onClick }) {
   const isActive = pathname === href || (href.includes('#portfolio') && pathname === '/portfolio');
+
   return (
     <Link href={href} onClick={onClick}>
       <span
-        className={`cursor-pointer hover:text-blue-600 transition ${isActive ? 'text-blue-600' : ''}`}
+        className={`cursor-pointer hover:text-blue-600 transition ${isActive ? 'text-blue-600 font-semibold' : ''}`}
       >
         {label}
       </span>

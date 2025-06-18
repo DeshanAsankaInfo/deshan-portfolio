@@ -20,13 +20,17 @@ export default function CollectionPage({ params }) {
       <div className="flex flex-col min-h-screen bg-gradient-to-b from-[#F9FBFF] to-[#EDF7FA]">
 
         {/* Close Button */}
-        <div className="fixed top-20 left-6 z-50">
+        <div className="fixed top-20 left-8 z-50">
           <Link href={`/portfolio/software/${slug}#gallery`} scroll={true}>
-            <div className="p-3 bg-white/80 backdrop-blur-lg rounded-full shadow-lg border border-gray-300 hover:bg-white transition-all duration-300">
-              <span className="text-blue-700 text-3xl font-bold leading-none">×</span>
+            <div className="group relative w-10 h-10 md:w-12 md:h-12 bg-white/70 backdrop-blur-md rounded-full border border-gray-300 shadow-md transition-all duration-300 hover:bg-blue-600 hover:shadow-xl flex items-center justify-center">
+              <span className="text-blue-700 text-2xl font-bold leading-none group-hover:text-white transition-colors duration-300">
+                ×
+              </span>
             </div>
           </Link>
         </div>
+
+
 
         <main className="flex-grow pt-24">
           <h1

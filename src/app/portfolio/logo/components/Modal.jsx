@@ -52,10 +52,11 @@ export default function Modal({ project, onClose }) {
 
         {/* Close Button */}
         <button
-          className="absolute top-4 right-4 text-gray-500 hover:text-gray-700 text-2xl"
           onClick={onClose}
+          className="absolute top-2 right-2 z-50 bg-white text-gray-700 hover:bg-blue-600 hover:text-white w-10 h-10 rounded-full shadow-md flex items-center justify-center transition md:top-4 md:right-4"
+          aria-label="Close modal"
         >
-          ✖
+          ✕
         </button>
 
         {/* Left: Image Slider */}
@@ -125,7 +126,6 @@ export default function Modal({ project, onClose }) {
             </div>
           )}
         </div>
-
       </div>
     </div>
   );

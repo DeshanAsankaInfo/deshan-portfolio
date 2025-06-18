@@ -30,14 +30,14 @@ export default function CaseStudyPage({ params }) {
             </div>
           </div>
 
-  {/* Back Button */}
-<div className="absolute top-126 left-6 z-50">
-  <Link href="/portfolio/uiux">
-    <div className="p-2.5 bg-white/90 rounded-full shadow-lg transform transition-transform duration-300 ease-in-out hover:scale-110 hover:bg-blue-600 hover:shadow-xl">
-      <span className="text-blue-800 text-1x10 font-bold transition-colors duration-300 ease-in-out hover:text-white">← Back</span>
-    </div>
-  </Link>
-</div>
+          {/* Back Button */}
+          <div className="fixed top-20 left-8 z-50">
+            <Link href="/portfolio/uiux">
+            <div className="p-2 bg-white/90 rounded-full shadow-lg hover:scale-110 hover:bg-blue-600 transition">
+              <span className="text-blue-800 font-bold text-sm hover:text-white">← Back</span>
+            </div>
+            </Link>
+          </div>
 
 
 
